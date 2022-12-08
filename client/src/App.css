@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
-.header {
+.font {
   font-family: 'Noto Serif', serif;
+}
+img {
+  width: 100%;
+}
+
+.fixthis {
+  border: 5px solid limegreen !important;
+}
+
+.homesection {
+  min-width: 40vw;
 }
 
 .App {
