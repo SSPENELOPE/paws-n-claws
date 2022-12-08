@@ -30,7 +30,7 @@ const Header = () => {
                     </ul>
                 </div>
             </nav>
-            <div className="d-flex flex-row justify-content-center">
+            <div className="d-flex flex-row justify-content-center banner">
             <FontAwesomeIcon icon={faPaw} size="6x"/>
              <h1 className="text-center display-1 font">PAWS N' CLAWS PET CARE</h1>
             <FontAwesomeIcon icon={faPaw} size="6x"/>
