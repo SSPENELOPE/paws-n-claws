@@ -4,6 +4,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from "./components/Home";
 import './App.css';
 import { useState } from 'react';
+import Signup from './components/Signup';
 import Login from "./components/Login";
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
               </Routes>
             </div>
           <Footer />
