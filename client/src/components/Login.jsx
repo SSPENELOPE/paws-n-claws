@@ -58,19 +58,19 @@ const Login = (props) => {
                 ) : (
                     <form onSubmit={handleFormSubmit}>
                         <input
-                            type="text"
+                            type="email"
                             id="login"
                             className="fadeIn second"
-                            name="login"
+                            name="email"
                             placeholder="email"
                             value={formState.email}
                             onChange={handleChange}
                         ></input>
                         <input
-                            type="text"
+                            type="password"
                             id="password"
                             className="fadeIn third"
-                            name="login"
+                            name="password"
                             placeholder="password"
                             value={formState.password}
                             onChange={handleChange}
@@ -85,12 +85,14 @@ const Login = (props) => {
 
                 {error && (
                     <div className="my-3 p-3 bg-danger text-white">
-                        {error.message}
+                        <h5>user does not exist</h5>
+                        <p>please create an account <Link to="/signup"><u>here</u></Link></p>
                     </div>
                 )}
 
                 <div id="formFooter">
-                    <Link to="/signup" className="underlineHover" href="#">Or Register Here</Link>
+                    <p>Dont have an accout yet?</p>
+                    <Link to="/signup" className="underlineHover" href="#"><strong>Register Here</strong></Link>
                 </div>
             </div>
         </div >
