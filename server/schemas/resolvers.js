@@ -22,7 +22,7 @@ const resolvers = {
 
     Mutation: {
         addProfile: async (parent, { name, email, password }) => {
-          const profile = await Profile.create({ name, email, password });
+          const profile = await Profile.create({ name, email, password, address, city, state, zip });
           const token = signToken(profile);
     
           return { token, profile };

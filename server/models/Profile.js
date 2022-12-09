@@ -19,6 +19,30 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  address: {
+    type: String,
+    required: true,
+    trim: false,
+    unique: true,
+  },
+  city: {
+    type: String,
+    required: true,
+    unique: false,
+    trim: false,
+  },
+  state: {
+    type: String,
+    required: true,
+    unique: false,
+    trim: false,
+  },
+  zip: {
+    type: Number,
+    required: true,
+    unique: false,
+    trim: false,
+  }
 });
 
 // set up pre-save middleware to create password

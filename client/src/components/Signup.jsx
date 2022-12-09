@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
-
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -86,12 +84,15 @@ const Signup = () => {
                                   Submit
                                 </button>
                               </form> */
-                            <form className="d-flex align-items-center flex-column w-100">
+                            <form className="d-flex align-items-center flex-column w-100" onSubmit={handleFormSubmit}>
                                 <div className="form-row w-100">
                                 <div className="form-group col-md-6 w-100">
                                         <label htmlFor="inputName4">Name</label>
                                         <input 
-                                        type="text" 
+                                        type="text"
+                                        name="name" 
+                                        value={formState.name}
+                                        onChange={handleChange}
                                         className="form-control w-100" 
                                         id="inputName4"
                                         ></input>
@@ -99,7 +100,10 @@ const Signup = () => {
                                     <div className="form-group col-md-6 w-100">
                                         <label htmlFor="inputEmail4">Email</label>
                                         <input 
-                                        type="email" 
+                                        type="email"
+                                        name="email" 
+                                        value={formState.email}
+                                        onChange={handleChange}
                                         className="form-control w-100" 
                                         id="inputEmail4"
                                         ></input>
@@ -108,6 +112,9 @@ const Signup = () => {
                                         <label htmlFor="inputPassword4">Password</label>
                                         <input 
                                         type="password" 
+                                        name="password"
+                                        value={formState.password}
+                                        onChange={handleChange}
                                         className="form-control w-100" 
                                         id="inputPassword4"
                                         ></input>
@@ -117,9 +124,12 @@ const Signup = () => {
                                     <label htmlFor="inputAddress">Address</label>
                                     <input 
                                     type="text" 
+                                    name="address"
+                                    value={formState.address}
+                                    onChange={handleChange}
                                     className="form-control w-100" 
                                     id="inputAddress" 
-                                    placeholder="1234 Main St"
+                                    placeholder="Please enter the address where your animal will be"
                                     ></input>
                                 </div>
         
@@ -127,7 +137,10 @@ const Signup = () => {
                                     <div className="form-group col-md-6 w-100">
                                         <label htmlFor="inputCity">City</label>
                                         <input 
-                                        type="text" 
+                                        type="text"
+                                        name="city"
+                                        value={formState.city} 
+                                        onChange={handleChange}
                                         className="form-control" 
                                         id="inputCity"
                                         ></input>
@@ -135,7 +148,10 @@ const Signup = () => {
                                     <div className="form-group col-md-4 w-100">
                                         <label htmlFor="inputState">State</label>
                                         <input 
-                                        type="text" 
+                                        type="text"
+                                        name="state" 
+                                        value={formState.state}
+                                        onChange={handleChange}
                                         className="form-control" 
                                         id="inputCity"
                                         ></input>
@@ -144,6 +160,9 @@ const Signup = () => {
                                         <label htmlFor="inputZip">Zip</label>
                                         <input 
                                         type="text" 
+                                        name="zip"
+                                        value={formState.zip}
+                                        onChange={handleChange}
                                         className="form-control w-100" 
                                         id="inputZip"
                                         ></input>
