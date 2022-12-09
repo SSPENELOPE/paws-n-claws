@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Auth from "../utils/auth";
 
-const Header = ({ loggedIn, setLoggedIn }) => {
+const Header = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+    const logout = (event) => {
+        event.preventDefault();
+        Auth.logout();
+    };
+
     return (
-        <div>
+        <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex flex-row justify-content-between">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
                     <span className="navbar-toggler-icon"></span>
@@ -29,13 +36,13 @@ const Header = ({ loggedIn, setLoggedIn }) => {
                     </ul>
                 </div>
                 <div className="bg-dark" id="navbarNav">
-                    {loggedIn ? (
+                    {Auth.loggedIn() ? (
                         <ul className="navbar-nav h4">
                             <li className="nav-item">
                                 <Link to="/profile" className="nav-link text-light" >My Profile</Link>
                             </li>
                             <li className="nav-item">
-                                <button className="nav-link text-light" onClick={() => setLoggedIn(!loggedIn)}>Log Out</button>
+                                <button className="nav-link text-light bg-dark" onClick={logout}>Logout</button>
                             </li>
                         </ul>
                     ) : (
@@ -47,7 +54,7 @@ const Header = ({ loggedIn, setLoggedIn }) => {
                     )}
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
 

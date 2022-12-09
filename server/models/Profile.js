@@ -5,7 +5,7 @@ const profileSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
     trim: true,
   },
   email: {
@@ -23,7 +23,7 @@ const profileSchema = new Schema({
     type: String,
     required: true,
     trim: false,
-    unique: true,
+    unique: false,
   },
   city: {
     type: String,
@@ -38,7 +38,7 @@ const profileSchema = new Schema({
     trim: false,
   },
   zip: {
-    type: Number,
+    type: String,
     required: true,
     unique: false,
     trim: false,

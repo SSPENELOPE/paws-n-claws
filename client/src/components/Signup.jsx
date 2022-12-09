@@ -9,6 +9,10 @@ const Signup = () => {
         name: '',
         email: '',
         password: '',
+        address: '',
+        city: '',
+        state: '',
+        zip: '',
     });
     const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
@@ -51,39 +55,6 @@ const Signup = () => {
                                 <Link to="/">back to the homepage.</Link>
                             </p>
                         ) : (
-                            /*   <form onSubmit={handleFormSubmit}>
-                                <input
-                                  className="form-input"
-                                  placeholder="Your username"
-                                  name="name"
-                                  type="text"
-                                  value={formState.name}
-                                  onChange={handleChange}
-                                />
-                                <input
-                                  className="form-input"
-                                  placeholder="Your email"
-                                  name="email"
-                                  type="email"
-                                  value={formState.email}
-                                  onChange={handleChange}
-                                />
-                                <input
-                                  className="form-input"
-                                  placeholder="******"
-                                  name="password"
-                                  type="password"
-                                  value={formState.password}
-                                  onChange={handleChange}
-                                />
-                                <button
-                                  className="btn btn-block btn-info"
-                                  style={{ cursor: 'pointer' }}
-                                  type="submit"
-                                >
-                                  Submit
-                                </button>
-                              </form> */
                             <form className="d-flex align-items-center flex-column w-100" onSubmit={handleFormSubmit}>
                                 <div className="form-row w-100">
                                 <div className="form-group col-md-6 w-100">
@@ -153,7 +124,7 @@ const Signup = () => {
                                         value={formState.state}
                                         onChange={handleChange}
                                         className="form-control" 
-                                        id="inputCity"
+                                        id="inputState"
                                         ></input>
                                     </div>
                                     <div className="form-group col-md-2 w-100">
