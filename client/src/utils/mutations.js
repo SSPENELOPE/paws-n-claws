@@ -13,7 +13,7 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_PROFILE = gql`
-  mutation addProfile($name: String!, $email: String!, $password: String!) {
+  mutation addProfile($name: String!, $email: String!, $password: String!, $address: String!, $city: String!, $state: String!, $zip: String!) {
     addProfile(
     name: $name, 
     email: $email, 

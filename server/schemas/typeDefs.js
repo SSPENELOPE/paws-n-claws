@@ -9,7 +9,7 @@ const typeDefs = gql`
     address: String
     city: String
     state: String
-    zip: Number
+    zip: String
   }
 
   type Auth {
@@ -25,7 +25,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!): Auth
+    addProfile(name: String!, email: String!, password: String!, address: String!, city: String!, state: String!, zip: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;
