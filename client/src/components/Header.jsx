@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ loggedIn, setLoggedIn }) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -10,8 +8,6 @@ const Header = ({ loggedIn, setLoggedIn }) => {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     return (
         <div>
-
-
             <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex flex-row justify-content-between">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
                     <span className="navbar-toggler-icon"></span>
@@ -51,11 +47,6 @@ const Header = ({ loggedIn, setLoggedIn }) => {
                     )}
                 </div>
             </nav>
-            <div className="d-flex flex-row justify-content-center banner">
-                <FontAwesomeIcon icon={faPaw} size="6x" />
-                <h1 className="text-center display-1 font">PAWS N' CLAWS PET CARE</h1>
-                <FontAwesomeIcon icon={faPaw} size="6x" />
-            </div>
         </div>
     )
 }
