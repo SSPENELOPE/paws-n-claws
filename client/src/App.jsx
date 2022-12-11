@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import './App.css';
 import Signup from './components/Signup';
 import Login from "./components/Login";
-import Profile  from './components/Profile';
+import Profile  from './pages/Profile';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
