@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Auth from "../utils/auth";
+import Auth from "../../utils/auth";
 
 const Header = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -25,7 +25,7 @@ const Header = () => {
                             <Link to="/" className="nav-link text-light" href="#">Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Features</a>
+                            <Link to="/appointment" className="nav-link text-light">Appointments</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-light" href="#">Pricing</a>
