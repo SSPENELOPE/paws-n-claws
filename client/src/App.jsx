@@ -10,7 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 import Home from "./pages/Home";
 import './App.css';
 import Signup from './components/Signup';
-import Login from "./components/Login";
+import Login from "./pages/Login";
 import Profile  from './pages/Profile';
 
 const httpLink = createHttpLink({
