@@ -9,8 +9,13 @@
 }
 
 .paragraph {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: bolder;
+}
+
+.mission {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .banner {
@@ -28,6 +33,24 @@ img {
 
 .homesection {
   min-width: 40vw;
+  background-color:cornsilk;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apptLogin {
+  text-align: center;
+  background-color:cornsilk;
+  font-family: 'Not Serif', serif;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App {
