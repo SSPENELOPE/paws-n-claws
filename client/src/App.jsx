@@ -7,12 +7,11 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import './App.css';
 import Signup from './components/Signup';
 import Login from "./components/Login";
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Profile  from './components/Profile';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -39,15 +38,14 @@ function App() {
   return (
     <ApolloProvider client={client}>
         <Router >
-          <Header />
             <div className="flex-row justify-center align-center min-100-vh">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/me" element={<Profile />} />
               </Routes>
             </div>
-          <Footer />
         </Router>
     </ApolloProvider>
   );

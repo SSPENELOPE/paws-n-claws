@@ -1,12 +1,15 @@
 import React from "react";
 import dogWalk from '../assets/images/dog-walk.png'
 import dogTrainer from '../assets/images/dogTrainer.webp'
+import Header from '../components/Header';
+import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     return (
         <div>
+            <Header />
             <div className="d-flex flex-row justify-content-center banner">
                 <FontAwesomeIcon icon={faPaw} size="6x" />
                 <h1 className="text-center display-1 font">PAWS N' CLAWS PET CARE</h1>
@@ -41,6 +44,7 @@ const Home = () => {
                 </div>
 
             </div>
+            <Footer />
         </div>
     )
 }
