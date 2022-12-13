@@ -43,7 +43,7 @@ const Signup = () => {
     };
 
     return (
-        <main className="d-flex flex-column align-items-center mb-4 w-100">
+        <main className="d-flex flex-column align-items-center mb-4 w-100 signup">
             
             <div className="col-12 col-lg-10">
                 <div className="card">

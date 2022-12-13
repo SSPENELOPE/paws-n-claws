@@ -15,27 +15,27 @@ const Header = () => {
 
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex flex-row justify-content-between">
+            <nav className="navbar navbar-expand-lg navbar-light nav d-flex flex-row justify-content-between">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse bg-dark`} id="navbarNav">
+                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse nav-section`} id="navbarNav">
                     <ul className="navbar-nav h4">
                         <li className="nav-item active">
-                            <Link to="/" className="nav-link text-light" href="#">Home <span className="sr-only">(current)</span></Link>
+                            <Link to="/" className="nav-link link" style={{border: "none"}}>Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/appointment" className="nav-link text-light">Appointments</Link>
+                            <Link to="/appointment" className="nav-link link">Appointments</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Pricing</a>
+                            <a className="nav-link link" href="#">Pricing</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                            <a className="nav-link link" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                 </div>
-                <div className="bg-dark" id="navbarNav">
+                <div className="nav-section" id="navbarNav">
                     {Auth.loggedIn() ? (
                         <ul className="navbar-nav h4">
                             <li className="nav-item">
@@ -48,7 +48,7 @@ const Header = () => {
                     ) : (
                         <ul className="navbar-nav h4">
                             <li className="nav-item">
-                                <Link to="/login" className="nav-link text-light">Login</Link>
+                                <Link to="/login" className="nav-link link" style={{border: "none"}}>Login</Link>
                             </li>
                         </ul>
                     )}
