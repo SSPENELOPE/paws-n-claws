@@ -28,7 +28,7 @@ const Home = () => {
                 </div>
                 &nbsp;
                 <div className="d-flex flex-row">
-                    <div className="homesection text-center flex-wrap services">
+                    <div className="homesection2 text-center flex-wrap services">
                         <h1 className="font"><u>OUR SERVICES</u></h1>
                         <p className="paragraph">At PAWS N CLAWS we specialize in animal care. While your away pick from a variety of services we offer to ensure your pet is taken care of while you're on that vaction you'd been wanting to take for months or maybe just out of town visting family. If you're not sure we offer the service always feel free to reach out and ask and we will do our best to ensure your animal is taken care of!</p>
                         &nbsp;

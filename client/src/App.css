@@ -8,6 +8,14 @@
   font-family: 'Noto Serif', serif;
 }
 
+.font2 {
+  font-family: 'Pacifico', cursive;
+  text-align: right;
+  color: darksalmon;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .paragraph {
   font-size: 19px;
   font-weight: bolder;
@@ -19,12 +27,23 @@
 }
 
 .banner {
-  background-color: gray;
+  background-color: rgb(134, 150, 105)a;
 }
 
 img {
   width: 100%;
   height: 100%;
+}
+
+.link {
+  color: darksalmon;
+  margin: 10px;
+  border-left: 1px solid darksalmon;
+  font-family: 'Pacifico', cursive;
+}
+
+.link:hover {
+  color: cornsilk;
 }
 
 .fixthis {
@@ -34,6 +53,28 @@ img {
 .homesection {
   min-width: 40vw;
   background-color:cornsilk;
+}
+
+.homesection2 {
+  min-width: 40vw;
+  background-color:rgb(134, 150, 105);
+}
+
+.apptSection {
+  max-width: 30vw;
+  min-height: 60vh;
+  background-color:cornsilk;
+}
+
+.apptSection2 {
+  max-width: 30vw;
+  min-width: 30vw;
+  min-height: 60vh;
+  background-color:rgb(134, 150, 105);
+}
+
+.nav {
+  background-color:rgb(134, 150, 105);
 }
 
 .services {
@@ -51,6 +92,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.apptBtn {
+  background-color: rgb(134, 150, 105);
+}
+
+
+.signup {
+  background-image: url(./assets/images/dogOutside.jpeg);
+  height: 100vh;
 }
 
 .App {
@@ -123,8 +174,11 @@ h2 {
   flex-direction: column; 
   justify-content: center;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 20px;
+  background-image: url(./assets/images/loginDog.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 #formContent {
@@ -350,4 +404,14 @@ input[type=text]:placeholder {
 
 #icon {
   width:60%;
+}
+
+
+
+/*  media queries  */
+
+@media screen and (max-width: 980px) {
+    .appt {
+      flex-wrap: wrap;
+    }
 }
