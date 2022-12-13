@@ -39,10 +39,10 @@ const Header = () => {
                     {Auth.loggedIn() ? (
                         <ul className="navbar-nav h4">
                             <li className="nav-item">
-                                <Link to="/me" className="nav-link text-light btn" >My Profile</Link>
+                                <Link to="/me" className="nav-link link" >My Profile</Link>
                             </li>
                             <li className="nav-item">
-                                <button className="nav-link text-light bg-dark btn" onClick={logout}>Logout</button>
+                                <button className="nav-link btn link" onClick={logout}>Logout</button>
                             </li>
                         </ul>
                     ) : (

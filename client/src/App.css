@@ -73,6 +73,20 @@ img {
   background-color:rgb(134, 150, 105);
 }
 
+.profileSection {
+  background-color: cornsilk;
+  justify-content: space-around;
+}
+
+.profile {
+  justify-content: center;
+  height: 100%;
+}
+
+.profileBtn {
+  color: darksalmon;
+}
+
 .nav {
   background-color:rgb(134, 150, 105);
 }
