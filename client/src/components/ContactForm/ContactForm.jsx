@@ -23,6 +23,7 @@ const ContactForm = () => {
                     <h1>Tech Support!</h1>
                     <form
                         id="contactForm"
+                        /* for the time being, until I can get a working email from the client, I am using the same key provided by formsubmit. When I do get a working email, it will be updated to her email/key. But, until then, the routes for 'tech support' and 'dog walker' are sharing the same key. KWG */
                         action="https://formsubmit.co/4967479015bb1363cd174fe9a839dc12"
                         method="POST"
                     >

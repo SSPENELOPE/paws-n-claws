@@ -29,6 +29,8 @@ const Footer = () => {
 					</Column>
 					<Column>
 						<Heading>Social Media</Heading>
+						{/* As it stands now, I do not have any URL's for the owner of the business this site is being created for. Until I do, I have included a '#' so that the route still exists and can be updated
+						as soon as I get a response, but without breaking the rest of the website. KWG  */}
 						<a href="#">
 							<FooterLink>
 								<i className="fab fa-facebook-f">
