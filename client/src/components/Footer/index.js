@@ -29,7 +29,7 @@ const Footer = () => {
 					</Column>
 					<Column>
 						<Heading>Social Media</Heading>
-						<a href="/">
+						<a href="#">
 							<FooterLink>
 								<i className="fab fa-facebook-f">
 									<span style={{ marginLeft: "10px" }}>
@@ -38,7 +38,7 @@ const Footer = () => {
 								</i>
 							</FooterLink>
 						</a>
-						<a href="/">
+						<a href="#">
 							<FooterLink>
 								<i className="fab fa-instagram">
 									<span style={{ marginLeft: "10px" }}>
@@ -47,7 +47,7 @@ const Footer = () => {
 								</i>
 							</FooterLink>
 						</a>
-						<a href="/">
+						<a href="#">
 							<FooterLink>
 								<i className="fab fa-twitter">
 									<span style={{ marginLeft: "10px" }}>
