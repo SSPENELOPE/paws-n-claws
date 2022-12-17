@@ -32,6 +32,10 @@ class AuthService {
       localStorage.removeItem('id_token');
       window.location.assign('/');
     }
+    redirect() {
+      window.location.assign('/login');
+      alert("You must be signed in to Schedule an appointment");
+    }
   }
   
   export default new AuthService();

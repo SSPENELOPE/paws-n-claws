@@ -52,6 +52,7 @@ function App() {
                 <Route path="/appointment" element={<Appointment />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/appointment/schedule" element={<Scheduler />} />
+                <Route path="/pricing/appointment/schedule" element={<Scheduler />} />
               </Routes>
             </div>
         </Router>
