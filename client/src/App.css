@@ -48,13 +48,15 @@ img {
   color: cornsilk;
 }
 
+.nav {
+  background-color:rgb(134, 150, 105);
+}
+
 .fixthis {
   border: 5px solid limegreen !important;
 }
 
-.profileBody {
-  height: 100vh;
-}
+
 
 .servicesBorder {
   border: 2px solid cornsilk;
@@ -112,6 +114,10 @@ img {
   justify-content: center;
 }
 
+.profileBody {
+  height: 100vh;
+}
+
 .profile {
   justify-content: center;
   height: 70vh;
@@ -148,37 +154,6 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.nav {
-  background-color:rgb(134, 150, 105);
-}
-
-.services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.apptLogin {
-  text-align: center;
-  background-color:cornsilk;
-  font-family: 'Not Serif', serif;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.apptBtn {
-  background-color: rgb(134, 150, 105);
-}
-
-
-.signup {
-  background-image: url(./assets/images/dogOutside.jpeg);
-  height: 100vh;
 }
 
 .modalBackground {
@@ -223,6 +198,91 @@ img {
   margin: 10px;
 }
 
+
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apptLogin {
+  text-align: center;
+  background-color:cornsilk;
+  font-family: 'Not Serif', serif;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apptBtn {
+  background-color: rgb(134, 150, 105);
+}
+
+
+.signup {
+  background-image: url(./assets/images/dogOutside.jpeg);
+  height: 100vh;
+  justify-content: center;
+}
+
+.formWidth {
+  width: 40vw;
+}
+
+
+/*  Pricing Page  */
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-basis: 1 1;
+  align-items: center;
+  background-color:  cornsilk;
+  padding: 10px;
+}
+
+.customCard {
+  max-height: 200px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceBtn {
+  font-size: 30px;
+}
+
+.bg-green {
+  background-color: rgb(134, 150, 105);
+}
+
+.bg-silk {
+  background-color: cornsilk;
+}
+
+.priceFont {
+  color: darksalmon;
+}
+
+.silkFont {
+  color: cornsilk;
+}
+
+
+/*  React Base install items  */
+
 .App {
   text-align: center;
 }
@@ -264,7 +324,7 @@ img {
 
 
 
-/*  Start of the shenanigans     */
+/*   Login Page   */
 
 a {
   color: #92badd;

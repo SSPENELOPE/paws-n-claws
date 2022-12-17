@@ -44,11 +44,11 @@ const Signup = () => {
     };
 
     return (
-        <main className="d-flex flex-column align-items-center mb-4 w-100 signup">
+        <main className="d-flex flex-column align-items-center mb-4 signup w-100">
             
-            <div className="col-12 col-lg-10">
-                <div className="card">
-                    <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+            <div className="col-12 col-lg-10 formWidth">
+                <div className="card bg-green">
+                    <h4 className="card-header bg-dark priceFont p-2">Sign Up</h4>
                     <div className="card-body">
                         {data ? (
                             <p>
@@ -56,10 +56,10 @@ const Signup = () => {
                                 <Link to="/">back to the homepage.</Link>
                             </p>
                         ) : (
-                            <form className="d-flex align-items-center flex-column w-100" onSubmit={handleFormSubmit}>
+                            <form className="d-flex align-items-center flex-column" onSubmit={handleFormSubmit}>
                                 <div className="form-row w-100">
                                 <div className="form-group col-md-6 w-100">
-                                        <label htmlFor="inputName4">Name</label>
+                                        <label htmlFor="inputName4" className='priceFont'>Name</label>
                                         <input 
                                         type="text"
                                         name="name" 
@@ -70,7 +70,7 @@ const Signup = () => {
                                         ></input>
                                     </div>
                                     <div className="form-group col-md-6 w-100">
-                                        <label htmlFor="inputEmail4">Email</label>
+                                        <label htmlFor="inputEmail4" className='priceFont'>Email</label>
                                         <input 
                                         type="email"
                                         name="email" 
@@ -81,7 +81,7 @@ const Signup = () => {
                                         ></input>
                                     </div>
                                     <div className="form-group col-md-6 w-100">
-                                        <label htmlFor="inputPassword4">Password</label>
+                                        <label htmlFor="inputPassword4" className='priceFont'>Password</label>
                                         <input 
                                         type="password" 
                                         name="password"
@@ -93,7 +93,7 @@ const Signup = () => {
                                     </div>
                                 </div>
                                 <div className="form-group w-100">
-                                    <label htmlFor="inputAddress">Address</label>
+                                    <label htmlFor="inputAddress" className='priceFont'>Address</label>
                                     <input 
                                     type="text" 
                                     name="address"
@@ -107,7 +107,7 @@ const Signup = () => {
         
                                 <div className="form-row w-100">
                                     <div className="form-group col-md-6 w-100">
-                                        <label htmlFor="inputCity">City</label>
+                                        <label htmlFor="inputCity" className='priceFont'>City</label>
                                         <input 
                                         type="text"
                                         name="city"
@@ -118,7 +118,7 @@ const Signup = () => {
                                         ></input>
                                     </div>
                                     <div className="form-group col-md-4 w-100">
-                                        <label htmlFor="inputState">State</label>
+                                        <label htmlFor="inputState" className='priceFont'>State</label>
                                         <input 
                                         type="text"
                                         name="state" 
@@ -129,7 +129,7 @@ const Signup = () => {
                                         ></input>
                                     </div>
                                     <div className="form-group col-md-2 w-100">
-                                        <label htmlFor="inputZip">Zip</label>
+                                        <label htmlFor="inputZip" className='priceFont'>Zip</label>
                                         <input 
                                         type="text" 
                                         name="zip"
