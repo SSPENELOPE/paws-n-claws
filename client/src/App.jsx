@@ -13,6 +13,7 @@ import Signup from './components/Signup/index';
 import Login from "./pages/Login";
 import Profile  from './pages/Profile';
 import Appointment from './pages/Appointments';
+import Pricing from './components/Pricing';
 import Scheduler from './components/Schedule';
 import ContactForm from './components/ContactForm/ContactForm';
 import RefundsCancellations from './pages/RefundsCancellations';
@@ -49,6 +50,8 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/me" element={<Profile />} />
                 <Route path="/appointment" element={<Appointment />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/appointment/schedule" element={<Scheduler />} />
               </Routes>
             </div>
         </Router>

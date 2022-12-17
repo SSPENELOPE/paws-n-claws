@@ -28,7 +28,7 @@ const Header = () => {
                             <Link to="/appointment" className="nav-link link">Appointments</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link" href="#">Pricing</a>
+                            <Link to="/pricing" className="nav-link link" href="#">Pricing</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link link" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
