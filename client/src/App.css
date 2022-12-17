@@ -4,6 +4,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .font {
   font-family: 'Noto Serif', serif;
 }
@@ -14,7 +15,11 @@
   color: darksalmon;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.font3 {
+  font-family: 'Pacifico', cursive;
+  color: darksalmon;
+  font-size: 25px;
+}
 
 .paragraph {
   font-size: 19px;
@@ -22,13 +27,10 @@
 }
 
 .mission {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 400;
 }
 
-.banner {
-  background-color: rgb(134, 150, 105);
-}
 
 img {
   width: 100%;
@@ -50,8 +52,24 @@ img {
   border: 5px solid limegreen !important;
 }
 
+.profileBody {
+  height: 100vh;
+}
+
+.servicesBorder {
+  border: 2px solid cornsilk;
+  box-shadow: 1px 1px 2px 3px cornsilk;
+}
+
+.homeBody {
+  display: flex;
+  flex-direction: row;
+}
+
 .homesection {
   min-width: 40vw;
+  max-width: 50vw;
+  max-height: 80vh;
   background-color:cornsilk;
 }
 
@@ -59,6 +77,8 @@ img {
   min-width: 40vw;
   background-color:rgb(134, 150, 105);
 }
+
+/* Appointment Page */ 
 
 .apptSection {
   max-width: 30vw;
@@ -73,18 +93,61 @@ img {
   background-color:rgb(134, 150, 105);
 }
 
+.areaList {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.areas {
+  border: 1px solid rgb(134, 150, 105);
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 2px 1px 2px 1px rgb(134, 150, 105);
+}
+
+/*  Profile area  */
 .profileSection {
   background-color: cornsilk;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .profile {
   justify-content: center;
-  height: 100%;
+  height: 70vh;
 }
 
 .profileBtn {
   color: darksalmon;
+}
+
+.profileBtnPanel {
+  width: 30%;
+  align-items: flex-start;
+  justify-content: left;
+  position: relative;
+}
+
+.profileComponent {
+  width: 60%;
+  justify-content: center;
+  border-top: 7px solid rgb(134, 150, 105);
+  border-bottom: 7px solid rgb(134, 150, 105);
+  border-radius: 5%;
+}
+
+.profileData {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.dataList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .nav {
@@ -116,6 +179,48 @@ img {
 .signup {
   background-image: url(./assets/images/dogOutside.jpeg);
   height: 100vh;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.modalBlur {
+  background-color: transparent;
+  filter: blur(8px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.custom-form {
+  width: 28%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(134, 150, 105);
+  border: 2px solid darksalmon;
+  box-shadow: 4px 1px 5px 1px darksalmon;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+.custom-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  margin: 10px;
 }
 
 .App {
@@ -190,6 +295,9 @@ h2 {
   width: 100%;
   min-height: 100vh;
   padding: 20px;
+}
+
+.loginBackground {
   background-image: url(./assets/images/loginDog.jpg);
   background-size: cover;
   background-position: center;
@@ -423,6 +531,20 @@ input[type=text]:placeholder {
 
 
 /*  media queries  */
+
+@media screen and (min-width: 2560px) {
+  .paragraph {
+    font-size: 35px;
+  }
+  .font {
+    font-size: 90px;
+  }
+
+  .list-unstyled li,
+  .list-unstyled li h6 {
+    font-size: 30px;
+  }
+}
 
 @media screen and (max-width: 980px) {
     .appt {

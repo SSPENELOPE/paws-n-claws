@@ -31,3 +31,23 @@ export const ADD_PROFILE = gql`
     }
   }
 `;
+
+export const UPDATE_PROFILE = gql`
+  mutation updateProfile($name: String!, $email: String!, $password: String!, $address: String!, $city: String!, $state: String!, $zip: String!) {
+    updateProfile(
+    name: $name, 
+    email: $email, 
+    password: $password,
+    address: $address,
+    city: $city,
+    state: $state,
+    zip: $zip,
+    )  {
+      token
+      profile {
+        _id
+        name
+      }
+    }
+  }
+`;
