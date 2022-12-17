@@ -28,16 +28,15 @@ export const QUERY_SINGLE_PROFILE = gql`
   }
 `;
 
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      name
-      email
-      address
-      city
-      state
-      zip
+
+export const QUERY_APPOINTMENT = gql`
+  query appointment($profileId: ID!) {
+    appointment(profileId: $profileId) {
+      collection {
+        name
+        start_time
+        status
+      }
     }
   }
 `;

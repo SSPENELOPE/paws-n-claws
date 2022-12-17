@@ -14,6 +14,7 @@ const Signup = () => {
         state: '',
         zip: '',
     });
+
     const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
     // update state based on form input changes
@@ -35,7 +36,7 @@ const Signup = () => {
             const { data } = await addProfile({
                 variables: { ...formState },
             });
-
+            console.log(data)
             Auth.login(data.addProfile.token);
         } catch (e) {
             console.error(e);

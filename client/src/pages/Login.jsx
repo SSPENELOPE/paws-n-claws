@@ -40,7 +40,7 @@ const Login = () => {
         });
     };
     return (
-
+    <div className="loginBackground">
         <div className="wrapper fadeInDown">
             <div id="formContent">
                 <div className="fadeIn first">
@@ -96,6 +96,7 @@ const Login = () => {
                 </div>
             </div>
         </div >
+    </div>
     )
 }
 
