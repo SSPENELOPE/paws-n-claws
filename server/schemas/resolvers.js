@@ -1,6 +1,9 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Profile } = require('../models');
 const { signToken } = require('../utils/auth');
+require('dotenv').config();
+const fetch = require('node-fetch');
+
 
 const resolvers = {
     Query: {
@@ -11,13 +14,31 @@ const resolvers = {
       profile: async (parent, { profileId }) => {
         return Profile.findOne({ _id: profileId });
       },
-      // By adding context to our query, we can retrieve the logged in user without specifically searching for them
-      me: async (parent, args, context) => {
-        if (context.user) {
-          return Profile.findOne({ _id: context.user._id });
-        }
-        throw new AuthenticationError('You need to be logged in!');
-      },
+    
+      appointment: async (parent, { profileId }) => {
+          const profile = await Profile.findOne({ _id: profileId })
+      /*     console.log("*********************************")
+          console.log(profile);
+          console.log("*********************************") */
+
+
+
+       const token = process.env.BEARER_TOKEN;
+          let url = 'https://api.calendly.com/scheduled_events?organization=https%3A%2F%2Fapi.calendly.com%2Forganizations%2F9e804a94-97f3-49f3-91f6-60628243be3c&invitee_email='+profile.email+'';
+
+          let options = {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: 'Bearer '+ token
+            }
+          };
+          
+         const response = await fetch(url, options);
+         const json = await response.json();
+         console.log(json);
+         return json; 
+      }
     },
 
     Mutation: {
@@ -43,6 +64,15 @@ const resolvers = {
           const token = signToken(profile);
           return { token, profile };
         },
+        updateProfile: async (parent, { name, email, password, address, city, state, zip }, context) => {
+          if(context.user) {
+            const profile = await Profile.findOneAndUpdate( { _id: context.user._id }, { name, email, password, address, city, state, zip });
+
+            const token = signToken(profile);
+            return { token, profile };
+          }
+
+        }
     }
     
 };
