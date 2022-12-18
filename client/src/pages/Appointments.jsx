@@ -26,8 +26,8 @@ const Appointment = () => {
                         </div>
                         <div className="homesection text-center flex-wrap">
                             <h1 className="font2">Appointments</h1>
-                            <div className="d-flex justify-content-around h-100 flex-row">
-                                <div className="d-flex flex-column justify-content-center w-50 p-4">
+                            <div className="h-100 avail">
+                                <div className="d-flex flex-column justify-content-center p-4 widthDiv">
                                     <h3><FontAwesomeIcon icon={faBone} /> Availability <FontAwesomeIcon icon={faBone} /></h3>
                                     <p>Don't worry about our availability, we got you covered! We are available 7 days a week to ensure your animal is taken care of. And yes, this does include holidays!
                                     </p>
