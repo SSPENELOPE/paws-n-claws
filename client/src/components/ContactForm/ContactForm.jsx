@@ -13,8 +13,8 @@ const ContactForm = () => {
 
             <select id='Support' onChange={(e) => { setOption(e.target.value) }}>
                 <option>---Choose Support Option---</option>
-                <option value='techsupport'>Tech support</option>
-                <option value='dogwalker'>Dog Walker</option>
+                <option value='techsupport'>Paws N Claws Tech support</option>
+                <option value='dogwalker'>Paws N Claws General help</option>
             </select>
             {option === 'techsupport' && (
 
