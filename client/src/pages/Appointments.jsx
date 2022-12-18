@@ -80,7 +80,7 @@ const Appointment = () => {
                                 </ul>
                             </div>
                             &nbsp;
-                            <h6>If your not sure we service your area, feel free to <Link to="#">Contact Us</Link></h6>
+                            <h6>If your not sure we service your area, feel free to <Link to="/contact">Contact Us</Link></h6>
                         </div>
                        
                         <div className="apptSection2">
