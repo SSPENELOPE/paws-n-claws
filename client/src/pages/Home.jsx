@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import dogPark from '../assets/images/ownerDogPark1.jpg'
 import ownerDog from '../assets/images/ownerDog1.jpg'
 import Header from '../components/Header';
@@ -79,7 +80,7 @@ const Home = () => {
                             </li>
                         </ul>
                         &nbsp;
-                        <h6>Click here to get full list of our pricing and services!</h6>
+                        <h5>Click <Link to="/pricing">here</Link> to get full list of our pricing and services!</h5>
                     </div>
                     <div className="imgSection">
                         <img src={ownerDog} />
