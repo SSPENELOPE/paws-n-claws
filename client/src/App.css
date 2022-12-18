@@ -726,6 +726,9 @@ input[type=text]:placeholder {
     .apptBtn {
       font-size: 10px;
     }
+    .customCard {
+      max-height: 250px;
+    }
     .dataList {
       display: flex;
       text-align: left;
