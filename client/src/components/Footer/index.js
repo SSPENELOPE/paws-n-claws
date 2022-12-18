@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
 	Box,
 	Container,
@@ -24,14 +25,14 @@ const Footer = () => {
 				<Row>
 					<Column>
 						<Heading>Customer Info</Heading>
-						<a href="/refund-cancellation"><FooterLink>Refunds/Cancellations</FooterLink></a>
-						<a href="/contact"><FooterLink>Contact Us</FooterLink></a>
+						<Link to="/refund" href="/refund-cancellation"><FooterLink>Refunds/Cancellations</FooterLink></Link>
+						<Link to="/contact" href="/contact"><FooterLink>Contact Us</FooterLink></Link>
 					</Column>
 					<Column>
 						<Heading>Social Media</Heading>
 						{/* As it stands now, I do not have any URL's for the owner of the business this site is being created for. Until I do, I have included a '#' so that the route still exists and can be updated
 						as soon as I get a response, but without breaking the rest of the website. KWG  */}
-						<a href="#">
+						<a aria-disabled="true" href="#">
 							<FooterLink>
 								<i className="fab fa-facebook-f">
 									<span style={{ marginLeft: "10px" }}>
@@ -40,7 +41,7 @@ const Footer = () => {
 								</i>
 							</FooterLink>
 						</a>
-						<a href="#">
+						<a aria-disabled="true" href="#">
 							<FooterLink>
 								<i className="fab fa-instagram">
 									<span style={{ marginLeft: "10px" }}>
@@ -49,7 +50,7 @@ const Footer = () => {
 								</i>
 							</FooterLink>
 						</a>
-						<a href="#">
+						<a aria-disabled="true" href="#">
 							<FooterLink>
 								<i className="fab fa-twitter">
 									<span style={{ marginLeft: "10px" }}>

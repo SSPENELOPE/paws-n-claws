@@ -53,6 +53,8 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/appointment/schedule" element={<Scheduler />} />
                 <Route path="/pricing/appointment/schedule" element={<Scheduler />} />
+                <Route path="/refund" element={<RefundsCancellations />} />
+                <Route path="/contact" element={<ContactForm />} />
               </Routes>
             </div>
         </Router>

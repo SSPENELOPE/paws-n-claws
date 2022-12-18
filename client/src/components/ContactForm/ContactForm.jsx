@@ -11,10 +11,10 @@ const ContactForm = () => {
         <div>
             <Header />
 
-            <select id='Support' onChange={(e) => { setOption(e.target.value) }}>
+            <select className="d-flex justify-content-center" id='Support' onChange={(e) => { setOption(e.target.value) }}>
                 <option>---Choose Support Option---</option>
-                <option value='techsupport'>Paws N Claws Tech support</option>
-                <option value='dogwalker'>Paws N Claws General help</option>
+                <option value='techsupport'>Tech support</option>
+                <option value='dogwalker'>General help</option>
             </select>
             {option === 'techsupport' && (
 
@@ -49,7 +49,7 @@ const ContactForm = () => {
             )}
             {option === 'dogwalker' && (
                 <div className="contact">
-                    <h1>Contact Us!</h1>
+                    <h1>Contact General Support</h1>
                     <form
                         id="contactForm"
                         action="https://formsubmit.co/4967479015bb1363cd174fe9a839dc12"

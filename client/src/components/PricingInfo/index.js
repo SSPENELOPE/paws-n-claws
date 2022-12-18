@@ -40,7 +40,7 @@ const PriceInfo = () => {
             {Auth.loggedIn() ? (
                  <Link to="appointment/schedule" className="mx-5 font2 display-6"><FontAwesomeIcon icon={faCircleArrowRight} />Schedule an appointment</Link>
             ) : (
-                <button onClick={() => Auth.redirect()} className="btn mx-5 font2 priceBtn"><FontAwesomeIcon icon={faCircleArrowRight} />Schedule an appointment</button>
+                <Link to="/login" onClick={() => alert("You must be logged in to schedule an appointment!")} className="btn mx-5 font2 priceBtn"><FontAwesomeIcon icon={faCircleArrowRight} />Schedule an appointment</Link>
 
             )}
     
