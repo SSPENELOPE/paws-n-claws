@@ -16,14 +16,10 @@ const UpcomingAppointments = (profile) => {
         }
       );
 
-    const appointment = data?.appointment.collection[0] || {};
-    const utc = appointment.start_time;
-    const date = new Date(utc).toLocaleDateString();
-    const time = new Date(utc).toLocaleTimeString();
-    console.log(time)
-    console.log(date)
 
-    console.log(appointment);
+      const appointment = data?.appointment.collection;
+
+
 
     if (loading) {
         return (
@@ -33,7 +29,7 @@ const UpcomingAppointments = (profile) => {
         )
     }
 
-    if (!appointment || appointment.status === "canceled") {
+    if (appointment.length === 0) {
         return (
             <div className="d-flex flex-column">
                 <h1 className="font">You have no upcoming appointments</h1>
@@ -42,15 +38,23 @@ const UpcomingAppointments = (profile) => {
         )
     }
 
-    if (appointment === data?.appointment.collection[0]) {
+    if (appointment.length >= 1) {
         return (
-            <div>
-                <h1>Your Upcoming Appointments</h1>
-                <div>
-                    <ul>
-                        <h5>{appointment.name}</h5>
-                        <li>{date} @ {time}</li>
-                    </ul>
+            <div className="d-flex flex-column w-100">
+                <h1 className="text-center">Your Upcoming Appointments</h1>
+                <div className="d-flex flex-column flex-wrap">
+                    {appointment.map((details, index) => {
+                        const date = new Date(details.start_time).toLocaleDateString()
+                        const time = new Date(details.start_time).toLocaleTimeString();
+                        return (
+                            <div key={index} className="d-flex flex-column w-50 flex-wrap my-2">
+                                <h3 className="apptInfo">{details.name}</h3> 
+                                <h3 className="apptInfo">{date} @ {time}</h3> 
+                                <h4 className="apptInfo">{details.status}</h4> 
+                                <div className="border-top"></div> 
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         )

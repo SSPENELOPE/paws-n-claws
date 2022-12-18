@@ -16,10 +16,10 @@ const Home = () => {
                 <h1 className="text-center display-1 font">PAWS N' CLAWS PET CARE</h1>
                 <FontAwesomeIcon icon={faPaw} size="6x" />
             </div>
-            <div className="d-flex flex-column m-5">
+            <div className="d-flex flex-column m-5 home">
 
                 <div className="homeBody">
-                    <div className="homesection">
+                    <div className="imgSection">
                         <img src={dogPark} />
                     </div>
                     <div className="homesection text-center flex-wrap">
@@ -28,24 +28,24 @@ const Home = () => {
                         <div className="d-flex flex-column">
                             <h2 className="text-dark display-6"><u>Why Choose us?</u></h2>
                             <ul className="list-unstyled">
-                                <li class="media">
-                                <FontAwesomeIcon className="mr-3" icon={faCalendarDays} size="4x" />
-                                        <div class="media-body">
-                                            <h5 class="mt-0 mb-1">Flexible Schedule</h5>
+                                <li className="media">
+                                <FontAwesomeIcon className="mr-3 homeIcon" icon={faCalendarDays} size="3x" />
+                                        <div className="media-body">
+                                            <h5 className="mt-0 mb-1">Flexible Schedule</h5>
                                             We are available 24/7 to ensure your animal gets the care it needs!
                                         </div>
                                 </li>
-                                <li class="media my-4">
-                                <FontAwesomeIcon className="mr-3" icon={faPerson} size="4x" />
-                                        <div class="media-body">
-                                            <h5 class="mt-0 mb-1">Strong Customer Connection</h5>
+                                <li className="media my-4">
+                                <FontAwesomeIcon className="mr-3 homeIcon" icon={faPerson} size="3x" />
+                                        <div className="media-body">
+                                            <h5 className="mt-0 mb-1">Strong Customer Connection</h5>
                                             Our relationship and communication with you is second to none, ensure your animal is in the hands of someone you can trust and will consistenly stay in contact with you!
                                         </div>
                                 </li>
-                                <li class="media">
-                                <FontAwesomeIcon className="mr-3" icon={faCreditCard} size="4x" />
-                                        <div class="media-body">
-                                            <h5 class="mt-0 mb-1">Easy and Affordable</h5>
+                                <li className="media">
+                                <FontAwesomeIcon className="mr-3 homeIcon" icon={faCreditCard} size="3x" />
+                                        <div className="media-body">
+                                            <h5 className="mt-0 mb-1">Easy and Affordable</h5>
                                             Traditonal animal boarding can be expensive and we know that, we make it easy and affordable for your pets care!
                                         </div>
                                 </li>
@@ -60,37 +60,28 @@ const Home = () => {
                         <p className="paragraph">At Paws N Claws we specialize in animal care. While your away pick from a variety of services we offer to ensure your pet is taken care of while you're on that vaction you'd been wanting to take for months or maybe just out of town visting family. If you're not sure we offer the service, always feel free to reach out and ask and we will do our best to ensure your animal is taken care of!</p>
                         &nbsp;
 
-                        <ul className="d-flex flex-row flex-wrap list-unstyled mx-2">
-                            <li className="servicesBorder mx-1 p-1">
-                                <FontAwesomeIcon icon={faDog} size="4x" />
+                        <ul className="d-flex flex-row flex-wrap list-unstyled servList">
+                            <li className="servicesBorder mx-2 my-2 p-1">
+                                <FontAwesomeIcon icon={faDog} size="4x" className="servIcon" />
                                 <h6 className="text-light">Drop Your Dog off</h6>
                             </li>
-                            <li className="servicesBorder mx-1 p-1">
-                                <FontAwesomeIcon icon={faHouseCircleCheck} size="4x" />
+                            <li className="servicesBorder mx-2 my-2 p-1">
+                                <FontAwesomeIcon icon={faHouseCircleCheck} size="4x" className="servIcon" />
                                 <h6 className="text-light">Inhome stays/checkups</h6>
                             </li>
-                            <li className="servicesBorder mx-1 p-1">
-                                <FontAwesomeIcon icon={faShoePrints} size="4x" />
+                            <li className="servicesBorder mx-2 my-2 p-1">
+                                <FontAwesomeIcon icon={faShoePrints} size="4x" className="servIcon"/>
                                 <h6 className="text-light">30min walk for your dog</h6>
                             </li>
-                            <li className="servicesBorder mx-1 p-1">
-                                <FontAwesomeIcon icon={faBowlFood} size="4x" />
+                            <li className="servicesBorder mx-2 my-2 p-1">
+                                <FontAwesomeIcon icon={faBowlFood} size="4x" className="servIcon"/>
                                 <h6 className="text-light">Food/Water/Treats</h6>
                             </li>
                         </ul>
-
-                        {/*      <div>
-                        <h3>Here are some of the services we offer!</h3>
-                            <ul style={{listStyle: "none"}}>
-                                <li>Dog Walking</li>
-                                <li>Overnight Stays with your pet</li>
-                                <li>Feeding and Bathroom Breaks</li>
-                            </ul>
-                        </div> */}
                         &nbsp;
                         <h6>Click here to get full list of our pricing and services!</h6>
                     </div>
-                    <div className="homesection">
+                    <div className="imgSection">
                         <img src={ownerDog} />
                     </div>
                 </div>

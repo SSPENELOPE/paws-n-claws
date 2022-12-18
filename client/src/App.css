@@ -71,7 +71,7 @@ img {
 .homesection {
   min-width: 40vw;
   max-width: 50vw;
-  max-height: 80vh;
+  max-height: 83vh;
   background-color:cornsilk;
 }
 
@@ -80,8 +80,19 @@ img {
   background-color:rgb(134, 150, 105);
 }
 
-/* Appointment Page */ 
+.imgSection {
+  min-width: 40vw;
+  max-width: 50vw;
+  max-height: 80vh;
+  background-color:cornsilk;
+}
 
+/* Appointment Page */ 
+.apptWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .apptSection {
   max-width: 30vw;
   min-height: 60vh;
@@ -120,7 +131,6 @@ img {
 
 .profile {
   justify-content: center;
-  height: 70vh;
 }
 
 .profileBtn {
@@ -223,8 +233,9 @@ img {
 
 
 .signup {
-  background-image: url(./assets/images/dogOutside.jpeg);
+  background-image: url(./assets/images/signUp.jpg);
   height: 100vh;
+  padding: 10px;
   justify-content: center;
 }
 
@@ -636,6 +647,7 @@ input[type=text]:placeholder {
 
 /*  media queries  */
 
+/* Large Screens  */
 @media screen and (min-width: 2560px) {
   .paragraph {
     font-size: 35px;
@@ -650,8 +662,58 @@ input[type=text]:placeholder {
   }
 }
 
-@media screen and (max-width: 980px) {
+
+/* Medium screens */
+@media screen and (max-width: 1080px) {
     .appt {
       flex-wrap: wrap;
+    }
+    .apptWrapper {
+      flex-direction: column;
+      max-width: 100vw;
+    }
+    .apptSection, .apptSection2 {
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+    .homeBody {
+      flex-direction: column;
+    }
+    .imgSection,
+    .homesection {
+      max-width: 100vw;
+      max-height: 2000vh;
+    }
+    .apptInfo {
+      font-size: 15px;
+    }
+    .homeIcon {
+      font-size: 30px;
+    } 
+    .profileSection {
+      justify-content: space-between;
+    }
+}
+
+/*  Small Screens  */ 
+
+@media screen and (max-width: 550px) {
+    .imgSection {
+      display: none;
+    }
+    .homesection {
+      max-height: 200vh;
+    }
+    .servIcon {
+      font-size: 40px;
+    }
+    .servList {
+      justify-content: space-around;
+    }
+    .paragraph {
+      font-size: 15px;
+    }
+    .apptBtn {
+      font-size: 10px;
     }
 }
