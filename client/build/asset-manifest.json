@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29d0114d.css",
+    "main.js": "/static/js/main.545dfc1e.js",
+    "static/js/787.a707fea5.chunk.js": "/static/js/787.a707fea5.chunk.js",
+    "static/media/ownerDogPark1.jpg": "/static/media/ownerDogPark1.214d2d15ed88fcc9d475.jpg",
+    "static/media/ownerDog2.jpg": "/static/media/ownerDog2.b94d3b03ea0ccce2e9e9.jpg",
+    "static/media/ownerDog5.jpg": "/static/media/ownerDog5.48a11cb8330da2d21afd.jpg",
+    "static/media/ownerDog4.jpg": "/static/media/ownerDog4.c068025f68955437ef0e.jpg",
+    "static/media/signUp.jpg": "/static/media/signUp.f112b34de2d09370c3b3.jpg",
+    "static/media/ownerDog3.jpg": "/static/media/ownerDog3.69ba73e137b10876b685.jpg",
+    "static/media/romarepark.jpg": "/static/media/romarepark.79e3a95cc72f17069e51.jpg",
+    "static/media/loginDog.jpg": "/static/media/loginDog.78c39974434ae7cbf88a.jpg",
+    "static/media/fortMill.jpg": "/static/media/fortMill.dccf595395c38b90a8d6.jpg",
+    "static/media/puppies.jpg": "/static/media/puppies.525e42926e2a89511a47.jpg",
+    "static/media/ownerDog1.jpg": "/static/media/ownerDog1.ac1d0f46da785b6ddc48.jpg",
+    "index.html": "/index.html",
+    "main.29d0114d.css.map": "/static/css/main.29d0114d.css.map",
+    "main.545dfc1e.js.map": "/static/js/main.545dfc1e.js.map",
+    "787.a707fea5.chunk.js.map": "/static/js/787.a707fea5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29d0114d.css",
+    "static/js/main.545dfc1e.js"
+  ]
+}
