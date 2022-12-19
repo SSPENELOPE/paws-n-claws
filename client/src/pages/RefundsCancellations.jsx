@@ -45,7 +45,7 @@ const RefundsCancellations = () => {
               </li>
             </ul>
            
-            <h1>If you have any questions about this policy, please use the Contact Us form and select Dog Walker. </h1>
+            <h1>If you have any questions about this policy, please use the Contact Us form and select General Support. </h1>
           <Footer />
         </div>
         </div>

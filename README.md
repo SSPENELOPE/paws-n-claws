@@ -2,7 +2,7 @@
 
 # What is this?
 - This is a production website built for a small business using the MERN stack
-- I built this as a favor for a awesome friend which doubled as a requirment to obtain my web development certification from the UofM Coding Bootcamp
+- I built this as a favor for a awesome friend which doubled as a requirement to obtain my web development certification from the UofM Coding Bootcamp
 - The website includes almost all functionality that a product owner would want included in a production ready website
 - The learning curve on this was substantial as I implented API's and many other react libraries to make this all work together.
 
