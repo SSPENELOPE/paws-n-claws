@@ -8,15 +8,15 @@ const ProfileData = (props) => {
                 <h1 className="text-center">Your Personal Information</h1>
                 <ul style={{listStyle:"none"}} className="dataList">
                     <div>
-                        <h2 className="font text-dark"><u>UserName</u></h2>
+                        <h2 className="font4 text-dark"><u>UserName</u></h2>
                         <li>{props.profile.name}</li>
                     </div>
                     <div>
-                        <h2 className="font text-dark"><u>Address</u></h2>
+                        <h2 className="font4 text-dark"><u>Address</u></h2>
                         <li>{props.profile.address}, {props.profile.city}<br></br>{props.profile.state} {props.profile.zip}</li>
                     </div>
                     <div>
-                        <h2 className="font text-dark"><u>Email</u></h2>
+                        <h2 className="font4 text-dark"><u>Email</u></h2>
                         <li>{props.profile.email}</li>
                     </div>
                 </ul>

@@ -38,13 +38,13 @@ const Appointment = () => {
                                     {Auth.loggedIn() ? (
                                         <Link
                                             to="/appointment/schedule"
-                                            className="btn font apptBtn"
+                                            className="btn font4 apptBtn"
                                             >Schedule an appointment</Link>
                                     ) : (
                                     /* Else render link to the login component */
                                         <Link
                                         to="/login"
-                                    ><h3 className="btn font apptBtn">Login to book appointment</h3></Link>
+                                    ><h3 className="btn font4 apptBtn">Login to book appointment</h3></Link>
                                     )}
 
                                 </div>
@@ -60,7 +60,7 @@ const Appointment = () => {
                         </div>
 
                         <div className="apptSection text-center flex-wrap services p-5">
-                            <h1 className="font"><FontAwesomeIcon icon={faLocationDot} /><u>Areas We Service</u><FontAwesomeIcon icon={faLocationDot} /></h1>
+                            <h1 className="font4"><FontAwesomeIcon icon={faLocationDot} /><u>Areas We Service</u><FontAwesomeIcon icon={faLocationDot} /></h1>
                             <p className="paragraph">We apologize for any inconvience but we are currently only servicing the south Charlotte Suburb and Metro Area</p>
                             &nbsp;
                             <div>

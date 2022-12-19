@@ -12,19 +12,25 @@ const UpcomingAppointments = (profile) => {
     const { loading, data } = useQuery(
         QUERY_APPOINTMENT,
         {
-          variables: { profileId: profileId },
+            variables: { profileId: profileId },
         }
-      );
+    );
 
 
-      const appointment = data?.appointment.collection;
+    const appointment = data?.appointment.collection;
 
 
 
     if (loading) {
         return (
-            <div>
-                Loading...
+            <div className="d-flex flex-row align-self-center justify-content-center align-items-center display-4 font">
+                <div className="spinner-border" role="status">
+                </div>
+                <div>
+                    Loading
+                </div>
+                <div className="spinner-border" role="status">
+                </div>
             </div>
         )
     }
@@ -40,26 +46,28 @@ const UpcomingAppointments = (profile) => {
 
     if (appointment.length >= 1) {
         return (
-            <div className="d-flex flex-column w-100">
-                <h1 className="text-center">Your Upcoming Appointments</h1>
-                <div className="d-flex flex-column flex-wrap">
-                    {appointment.map((details, index) => {
-                        const date = new Date(details.start_time).toLocaleDateString()
-                        const time = new Date(details.start_time).toLocaleTimeString();
-                        return (
-                            <div key={index} className="d-flex flex-column w-50 flex-wrap my-2">
-                                <h3 className="apptInfo">{details.name}</h3> 
-                                <h3 className="apptInfo">{date} @ {time}</h3> 
-                                <h4 className="apptInfo">{details.status}</h4> 
-                                <div className="border-top"></div> 
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
+
+
+                  <div className="d-flex flex-column w-100">
+                      <h1 className="text-center">Your Upcoming Appointments</h1>
+                      <div className="d-flex flex-column flex-wrap">
+                          {appointment.map((details, index) => {
+                              const date = new Date(details.start_time).toLocaleDateString()
+                              const time = new Date(details.start_time).toLocaleTimeString();
+                              return (
+                                  <div key={index} className="d-flex flex-column w-50 flex-wrap my-2">
+                                      <h3 className="apptInfo">{details.name}</h3> 
+                                      <h3 className="apptInfo">{date} @ {time}</h3> 
+                                      <h4 className="apptInfo">{details.status}</h4> 
+                                      <div className="border-top"></div> 
+                                  </div>
+                              )
+                          })}
+                      </div>
+                  </div>
         )
     }
 
-    }
+}
 
 export default UpcomingAppointments;

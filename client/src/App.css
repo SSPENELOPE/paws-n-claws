@@ -21,6 +21,10 @@
   font-size: 25px;
 }
 
+.font4 {
+  font-family: 'Noto Serif', serif;
+}
+
 .paragraph {
   font-size: 19px;
   font-weight: bolder;
@@ -662,7 +666,10 @@ input[type=text]:placeholder {
     font-size: 35px;
   }
   .font {
-    font-size: 90px;
+    font-size: 80px;
+  }
+  .font4 {
+    font-size: 30px;
   }
 
   .list-unstyled li,
