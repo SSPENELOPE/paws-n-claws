@@ -758,4 +758,7 @@ input[type=text]:placeholder {
       width: 50%;
       align-self: center;
     }
+    .formWidth {
+      width: 90vw;
+    }
 }
