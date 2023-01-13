@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.29d0114d.css",
-    "main.js": "/static/js/main.545dfc1e.js",
+    "main.css": "/static/css/main.e5639ea6.css",
+    "main.js": "/static/js/main.d42b2d7f.js",
     "static/js/787.a707fea5.chunk.js": "/static/js/787.a707fea5.chunk.js",
     "static/media/ownerDogPark1.jpg": "/static/media/ownerDogPark1.214d2d15ed88fcc9d475.jpg",
     "static/media/ownerDog2.jpg": "/static/media/ownerDog2.b94d3b03ea0ccce2e9e9.jpg",
@@ -15,12 +15,12 @@
     "static/media/puppies.jpg": "/static/media/puppies.525e42926e2a89511a47.jpg",
     "static/media/ownerDog1.jpg": "/static/media/ownerDog1.ac1d0f46da785b6ddc48.jpg",
     "index.html": "/index.html",
-    "main.29d0114d.css.map": "/static/css/main.29d0114d.css.map",
-    "main.545dfc1e.js.map": "/static/js/main.545dfc1e.js.map",
+    "main.e5639ea6.css.map": "/static/css/main.e5639ea6.css.map",
+    "main.d42b2d7f.js.map": "/static/js/main.d42b2d7f.js.map",
     "787.a707fea5.chunk.js.map": "/static/js/787.a707fea5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29d0114d.css",
-    "static/js/main.545dfc1e.js"
+    "static/css/main.e5639ea6.css",
+    "static/js/main.d42b2d7f.js"
   ]
 }

@@ -1,127 +1,120 @@
-import React, { useState } from 'react';
-import Header from '../Header'
-import Footer from '../Footer/index'
+import React, { useState, useRef } from 'react';
+import Header from '../Header';
+import Footer from '../Footer/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import emailjs from '@emailjs/browser';
+
 
 const ContactForm = () => {
-    const [option, setOption] = useState('');
-    console.log(setOption)
+    const [option, setOption] = useState( { select: '', name: '', email: '', text: ''} );
+    const form = useRef();
+
+    /* set the state when the form values are changed */
+    const handleChange = (e) => {
+       const { name, value } = e.target;
+
+       setOption({
+        ...option,
+        [name]: value,
+       })
+    }
+
+    /* function to have the form sent to desired location use emailjs */
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+       
+        if (option.select === 'tech') {
+            emailjs.sendForm('service_cma7mwq', 'template_mlcfw7g', form.current, 'UVIfb9mkfrjrr5Kzu')
+            .then((result) => {
+                console.log(result.text);
+                console.log('message sent')
+            }, (error) => {
+                console.log(error.text);
+            });
+        } else if (option.select === 'paws') {
+            emailjs.sendForm('service_key for owner', 'template_key for owner', form.current, 'UVIfb9mkfrjrr5Kzu')
+            .then((result) => {
+                console.log(result.text);
+                console.log('message sent')
+            }, (error) => {
+                console.log(error.text);
+            });
+        } else {
+            alert('Please selct what you need help with')
+        }
+    }
+   
     return (
-
-
         <div>
             <Header />
+                <div className='bg-silk contactBody'>
+                    <h1 className='text-center'>Contact Us</h1>
 
-            <select className="d-flex justify-content-center" id='Support' onChange={(e) => { setOption(e.target.value) }}>
-                <option>---Choose Support Option---</option>
-                <option value='techsupport'>Tech support</option>
-                <option value='dogwalker'>General help</option>
-            </select>
-            {option === 'techsupport' && (
+                    {/* contact form  */}
+                    <div className='contactForm'>
+                        <form className='d-flex flex-column' ref={form} onSubmit={handleFormSubmit}>
+                            <h4>Please select the type of assistance you need</h4>
 
+                            {/* support select dropdown */}
+                            <select onChange={handleChange} name='select' className='my-2'>
+                                <option value='default'></option>
+                                <option value='tech'>Technical Support</option>
+                                <option value='paws'>Customer Support</option>
+                            </select>
 
-                <div className="contact">
-                    <h1>Tech Support!</h1>
-                    <form
-                        id="contactForm"
-                        /* for the time being, until I can get a working email from the client, I am using the same key provided by formsubmit. When I do get a working email, it will be updated to her email/key. But, until then, the routes for 'tech support' and 'dog walker' are sharing the same key. KWG */
-                        action="https://formsubmit.co/4967479015bb1363cd174fe9a839dc12"
-                        method="POST"
-                    >
-                        <input type="hidden" name="_captcha" value="false"></input>
-                        <input
-                            type="hidden"
-                            name="_next"
-                            value="http://localhost:3000/"
-                        ></input>
-                        <input type="email" name="Email" placeholder="Your Email"></input>
-                        <input type="text" name="Name" placeholder="Name" required></input>
-                        <input type="subject" name="Subject" placeholder="Subject"></input>
-                        <textarea
-                            id="description"
-                            type="text"
-                            name="Description"
-                            placeholder="Description"
-                            required
-                        ></textarea>
-                        <button type="submit">Send</button>
-                    </form>
+                               {/*  name input */}
+                            <h4 className='my-2'>Name</h4>
+                                <input 
+                                required
+                                placeholder='John Doe' 
+                                type='text' 
+                                name='name' 
+                                id='name' 
+                                value={option.name}
+                                onChange={handleChange}
+                                ></input>
+
+                                {/* email input */}
+                            <h4 className='my-2'>Email</h4>
+                                <input 
+                                required
+                                placeholder='johndoe@email.com' 
+                                type='text' 
+                                name='email' 
+                                id='email' 
+                                value={option.email}
+                                onChange={handleChange}
+                                ></input>
+
+                                {/* text area for problem */}
+                            <h4 className='my-2'>What can we help you with?</h4>
+                                <textarea 
+                                required
+                                placeholder='describe what we can help you with here'
+                                name='text'
+                                id='text'
+                                value={option.text}
+                                onChange={handleChange}
+                                className='contactText'
+                                ></textarea>
+
+                               {/*  submit button */}
+                            <input type='submit' name='Submit' value='Submit' className='btn my-2 bg-green' />
+                        </form>
+                    </div>
+                   
+                    <div className='text-center d-flex flex-column'>
+                        <a className="priceFont" href="tel:PHONE-NUM"><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> PHONE_NUM</a>
+                        <a className="priceFont" href='mailto:email@email.com'><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> email@email.com</a>
+                    </div>
+                    <h2></h2>
                 </div>
-            )}
-            {option === 'dogwalker' && (
-                <div className="contact">
-                    <h1>Contact General Support</h1>
-                    <form
-                        id="contactForm"
-                        action="https://formsubmit.co/4967479015bb1363cd174fe9a839dc12"
-                        method="POST"
-                    >
-                        <input type="hidden" name="_captcha" value="false"></input>
-                        <input
-                            type="hidden"
-                            name="_next"
-                            value="http://localhost:3000/"
-                        ></input>
-                        <input type="email" name="Email" placeholder="Your Email"></input>
-                        <input type="text" name="Name" placeholder="Name" required></input>
-                        <input type="subject" name="Subject" placeholder="Subject"></input>
-                        <textarea
-                            id="description"
-                            type="text"
-                            name="Description"
-                            placeholder="Description"
-                            required
-                        ></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-
-
-            )}
             <Footer />
         </div>
     );
 
 }
-// const [formStatus, setFormStatus] = React.useState('Send')
-// const onSubmit = (e) => {
-//     e.preventDefault()
-//     setFormStatus('Submitting...')
-//     const { name, email, message } = e.target.elements
-//     let contact = {
-//         name: name.value,
-//         email: email.value,
-//         message: message.value,
-//     }
-//     console.log(contact)
-// }
-// return (
-//     <div className='container mt-5'>
-//         <h2 className='mb-3'>Contact Us</h2>
-//         <form onSubmit={onSubmit}>
-//             <div className='mb-3'>
-//                 <label className='form-label' htmlFor='name'>
-//                     Name
-//                 </label>
-//                 <input className='form-control' type='text' id='name' required />
-//             </div>
-//             <div className='mb-3'>
-//                 <label className='form-label' htmlFor='email'>
-//                     Email
-//                 </label>
-//                 <input className='form-control' type='email' id='email' required />
-//             </div>
-//             <div className='mb-3'>
-//                 <label className='form-control' htmlFor='message'>
-//                     Message
-//                 </label>
-//                 <textarea className='form-control' id='message' required />
-//             </div>
-//             <button className='btn btn-danger' type='submit'>
-//                 {formStatus}
-//             </button>
-//         </form>
-// </div>
-// )
-// }
+
 
 export default ContactForm
